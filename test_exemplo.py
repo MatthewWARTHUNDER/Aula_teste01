@@ -8,6 +8,8 @@ def multiplicação (a, b):
     return a * b
 
 def divisão (a, b):
+    if b == 0:
+        return("Divisão com zero não é permitida.")
     return a / b
 
 def test_se_a_mais_b():
@@ -28,4 +30,4 @@ def test_se_a_vezes_b():
 def test_se_a_dividos_b():
     assert divisão (4, 2) == 2
     assert divisão (6, 2) == 3
-    assert divisão (64, 8) == 8
+    assert divisão (64, 0) == "Divisão com zero não é permitida."
